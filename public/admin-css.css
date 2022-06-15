@@ -1,0 +1,321 @@
+body {
+    background-color: #f1f6fc;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+    background-color: #4AC4F3;
+    color: white;
+    display : flex ;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    color: white;  
+}
+
+.menu-items a {
+    color: white; 
+    text-decoration: none; 
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 65px;
+}
+
+nav a {
+    color: white; 
+    text-decoration: none; 
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 65px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+nav a:hover {
+   background-color: rgb(75, 75, 75);
+}
+
+.table-div {
+    margin-top: 25px;
+    /* background-color: pink; */
+    display: flex;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 85%;
+}
+
+thead {
+    /* background-color: red; */
+    height: 35px;
+    border-style: none;
+    border-top: 2.5px solid black;   
+}
+
+tbody tr {
+    height: 35px;
+    text-align: center;
+    border-style: none;
+    border-top: 1px solid black; 
+    border-bottom: 1px solid black; 
+
+}
+
+tbody tr:hover {
+   background-color: rgb(235, 255, 214);
+}
+
+
+#tb-td {
+    text-align:end;
+    padding-right: 35px;
+}
+
+.before-table {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.before-table a {
+    color: black;
+    text-decoration: none;
+}
+
+.invoice-cats {
+    display: flex;
+}
+
+.invoice-cats div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    height: 40px;
+    border-radius: 2.5px;
+    border: 1px solid black;
+}
+
+.invoice-cats .midiv {
+    border-left-style: none ;
+    border-right-style: none ;
+    border-radius: 0.1px;
+}
+
+.new-invoice {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 40px;
+    border-radius: 3.5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.new-invoice-2 {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 40px;
+    border-radius: 3.5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+
+.invoice-div {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dotted black;
+    background-color: white;
+    border-top: 6px solid #4AC4F3;
+}
+
+.part-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 110px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.logo-box input {
+   width: 0.5%;
+}
+
+.logo-box label {
+    width: 100%;
+}
+
+.logo-box-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 110px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+.part-2 {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+    padding: 35px;
+}
+
+.from-side {
+  width: 50%;
+}
+
+.from-side div, .from-side-2 div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .from-side div label , .from-side-2 label {
+     width: 35%;
+
+  }
+
+  .from-side div input, .from-side-2 div input {
+    width: 65%;
+    border-radius: 2.5px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 3.5px;
+ }
+
+ .from-side-2 {
+    width: 100%;
+  }
+
+.to-side {
+    width: 50%;
+  }
+  .to-side div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .to-side div label {
+     width: 35%;
+
+  }
+
+  .to-side div input {
+    width: 65%;
+    border-radius: 2.5px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 3.5px;
+ }
+
+ /* #tb-td-2 {
+    text-align:start;
+} */
+#tbtd-p {
+    padding-left: 15px;
+}
+
+.part-4 {
+    padding-left: 35px;
+    margin-bottom: 25px;
+}
+
+.part-4 textarea {
+    margin-left: 10px;
+    border-radius: 2.5px;
+}
+
+.before-table-2 {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.before-table-2 a {
+    color: black;
+    text-decoration: none;
+}
+
+#fileud {
+    visibility: hidden;
+}
+.divbutton {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-radius: inherit;
+    color: white;
+    cursor:pointer;
+}
+
+.alert-div {
+    display: flex;
+    background-color: rgb(12, 191, 12);
+    width: 35%;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    justify-content: center;
+    column-gap: 1%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alert-div .sp1 {
+    text-align: center;
+    width: 80%;
+}
+
+.alert-div .sp2 {
+    text-align: center;
+    width: 10%
+}

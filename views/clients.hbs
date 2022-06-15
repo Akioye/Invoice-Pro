@@ -1,0 +1,44 @@
+<h2 style="text-align: center;">
+     Clients
+</h2>
+
+<div class="table-div">
+<table >
+    <thead>
+            <tr>
+                 <th>
+                     Client Name
+                 </th>
+                   <th>
+                     Phone Number
+                 </th>
+                   <th>
+                     Email
+                 </th>
+                   <th>
+                     Address
+                 </th>
+            </tr>
+    </thead>
+
+    <tbody>
+    {{#each clients}}
+            <tr>
+                <td>
+                    {{name}}
+                </td>
+                   <td>
+                    {{phoneNumber}}
+                </td>
+                   <td>
+                    {{email}}
+                </td>
+                   <td>
+                    {{address}}
+                   </td>
+            </tr>
+    {{/each}}
+            
+    </tbody>
+</table>
+</div>

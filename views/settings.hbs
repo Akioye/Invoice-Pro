@@ -1,0 +1,73 @@
+{{#if alert}}
+  <div class="alert-div"> 
+    <span class="sp1">  {{alert}} </span> <span class="sp2"> &times; </span>  
+  </div>
+{{/if}}
+
+<form action="/admin/settings" method="post" enctype="multipart/form-data">
+<div class="invoice-div">
+
+<div class="part-2">
+
+<div class="from-side-2">
+ <h2> Settings </h2>
+ <div>
+ <label for=""> Company Name </label>
+ <input type="text" name="companyname" value="{{mySettings.companyName}}">
+ </div>
+ <div>
+ <label for=""> Email </label>
+ <input type="text" name="companyemail" value="{{mySettings.companyEmail}}">
+ </div>
+ <div>
+         <label for=""> Company Logo </label>
+    <div class="logo-box-2">
+        
+        <input type="file"  accept="image/*" name="fileud" id="fileud" onchange="loadFile(event)" style="display: none;">
+        
+        <label for="fileud" style="cursor: pointer;">
+          + Logo 
+        </label>
+        <img id="output" width="25%" />
+
+    </div>
+ </div>
+
+
+ <div>
+ <label for=""> Address </label>
+ <input type="text" name="companyaddress" value="{{mySettings.companyAddress}}">
+ </div>
+ <div>
+ <label for=""> Phone Number </label>
+ <input type="text" name="companyphonenumber" value="{{mySettings.companyPhoneNumber}}">
+ </div>
+
+<div>
+ <label for=""> Business Number </label>
+ <input type="text" name="companybusinessnumber" value="{{mySettings.companyBusinessNumber}}">
+ </div>
+
+</div>
+
+</div>
+
+<hr>
+
+
+</div>
+
+<div class="before-table-2">
+    <a href="#new-invoice">
+    <div class="new-invoice">
+       <button class="divbutton" type="submit"> Update Settings </button> 
+    </div>
+    </a>
+</div>
+
+</form>
+
+
+<script>
+     
+</script>

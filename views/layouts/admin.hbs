@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin </title>
+    <link rel="stylesheet" href="/admin-css.css">
+
+</head>
+<body>
+
+{{#if currentUser}}    
+<nav>
+    <h1>
+       &RightArrowLeftArrow; Invoice Pro
+    </h1>
+    <div class="menu-items">
+
+        <a href="/admin"> Invoices </a>
+        <a href="/admin/clients"> Clients </a>
+        <a href="/admin/products"> Products </a>
+        <a href="/admin/settings"> Settings </a>
+    </div>
+        <a href="/logout"> Logout </a>
+</nav>
+{{else}}
+<nav>
+    <h1>
+       &RightArrowLeftArrow; Invoice Pro
+    </h1>
+    <div class="menu-items">
+
+        <a href="/admin"> Invoices </a>
+        <a href="/admin/clients"> Clients </a>
+        <a href="/admin/products"> Products </a>
+        <a href="/admin/settings"> Settings </a>
+         &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        <a href="/signup"> SignUp </a> 
+        <a href="/login"> Login </a>
+    </div>
+</nav>
+{{/if}}
+
+
+{{{body}}}
+
+<script src="/admin-js.js">
+</script>
+</body>
+</html>

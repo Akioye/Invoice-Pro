@@ -1,0 +1,76 @@
+<h2 style="text-align: center;">
+     Welcome {{currentUser.name}},
+</h2>
+
+<div class="before-table">
+    <div class="invoice-cats">
+         <a href="#">
+        <div>
+            All Invoices
+        </div>
+        </a>
+          <a href="#">
+        <div class="midiv">
+            Outstanding
+        </div>
+        </a>
+          <a href="#">
+        <div>
+            Paid
+        </div>
+        </a>
+    </div>
+
+    <a href="/admin/create-invoice">
+    <div class="new-invoice">
+            New Invoice
+    </div>
+    </a>
+</div>
+
+<div class="table-div">
+<table >
+    <thead>
+            <tr>
+                 <th>
+                     Invoice
+                 </th>
+                   <th>
+                     Client
+                 </th>
+                   <th>
+                     Date
+                 </th>
+                   <th>
+                     Balance Due
+                 </th>
+            </tr>
+    </thead>
+
+    <tbody>
+{{#each userInvoices}}
+            <tr>
+                <td>
+                    {{invoiceNumber}}
+                </td>
+                   <td>
+                    {{to.name}} 
+                </td>
+                   <td>
+                    {{from.date}}
+                </td>
+                   <td>
+                    {{sumTotal}}
+                   </td>
+            </tr>
+{{/each}}
+             <tr>
+           
+                   <td colspan="4" id="tb-td">
+                    Total Balance Due:
+                    <strong>N455,000</strong>
+                   </td>
+            </tr>
+    </tbody>
+</table>
+</div>

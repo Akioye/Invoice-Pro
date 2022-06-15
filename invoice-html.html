@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin </title>
+    <!-- <link rel="stylesheet" href="/admin-css.css"> -->
+
+    <style>
+body {
+    background-color: #f1f6fc;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+.table-div {
+    /* margin-top: 1.5%; */
+    /* background-color: pink; */
+    display: flex;
+}
+
+table {
+    /* margin-left: auto;
+    margin-right: auto; */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    /* background-color: red; */
+    height: 10%;
+    border-style: none;
+    border-top: 2.5px solid black;   
+}
+
+tbody tr {
+    height: 10%;
+    text-align: center;
+    border-style: none;
+    border-top: 1px solid black; 
+    border-bottom: 1px solid black; 
+
+}
+
+tbody tr:hover {
+   background-color: rgb(235, 255, 214);
+}
+
+
+#tb-td {
+    text-align:end;
+}
+
+.invoice-div {
+    /* margin-top: 25px; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    border: 1px dotted black;
+    background-color: white;
+    border-top: 6px solid #202942;
+}
+
+.part-1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    -webkit-flex-wrap: nowrap;
+    -webkit-flex-column-gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding: 0.5%;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.logo-box input {
+   width: 15%;
+}
+
+.logo-box label {
+    width: 80%;
+}
+
+
+.part-2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+   -webkit-flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* column-gap: 5%; */
+    padding: 0.5%;
+}
+
+.from-side {
+  width: 35%;
+}
+
+.from-side div {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 1.5%; */
+  }
+
+  .from-side div label {
+     width: 35%;
+  }
+
+.to-side {
+    width: 35%;
+  }
+
+  .to-side div {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 1.5%; */
+  }
+
+  .to-side div label {
+     width: 35%;
+
+  }
+
+  .to-side div input {
+    width: 65%;
+    border-radius: 2.5px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 3.5px;
+ }
+
+ /* #tb-td-2 {
+    text-align:start;
+} */
+#tbtd-p {
+    padding-left: 5%;
+}
+
+.part-4 {
+    padding-left: 10%;
+    /* margin-bottom: 5%; */
+}
+
+.part-4 textarea {
+    border-radius: 2.5px;
+    width: 85%;
+}
+
+
+.before-table-2 a {
+    color: black;
+    text-decoration: none;
+}
+
+#fileud {
+    visibility: hidden;
+}
+    </style>
+
+</head>
+<body>
+
+<form action="/create-invoice" method="post" enctype="multipart/form-data">
+<div class="invoice-div">
+
+<div class="part-1">
+    <div class="inv-num"> <h1>{{invoiceNumber}}</h1> </div>
+    <div class="logo-box">
+        
+        <input type="file" name="fileud" id="fileud">
+        <label for="fileud">
+             + Logo
+        </label> 
+         <img src="/img/fcmb-logo.png" alt="">
+    </div>
+</div>
+
+<div class="part-2">
+
+<div class="from-side">
+ <h2> From :  </h2>
+ <div>
+ <label for=""> Name </label>
+ <p> {{fromName}} </p>
+ </div>
+ <div>
+ <label for=""> Email </label>
+     <p>{{fromEmail}}</p>
+ </div>
+ <div>
+ <label for=""> Address </label>
+ <p>{{invoiceAddress}}</p>
+ </div>
+ <div>
+ <label for=""> Phone Number </label>
+ <p>{{fromPhoneNumber}}</p>
+ </div>
+
+<div>
+ <label for=""> Business Number </label>
+ <p>{{fromBusinessNumber}}</p>
+ </div>
+
+ <div>
+ <label for=""> Date </label>
+ <p>{{fromDate}}</p>
+ </div>
+
+</div>
+
+<div class="to-side">
+ <h2> To : </h2>
+ <div>
+ <label for=""> Name </label>
+<p>{{toName}}</p>
+</div>
+ <div>
+ <label for=""> Email </label>
+ <p>{{toEmail}}</p>
+</div>
+ <div>
+ <label for=""> Address </label>
+ <p>{{toAddress}}</p>
+</div>
+ <div>
+ <label for=""> Phone Number </label>
+ <p>{{toPhoneNumber}}</p>
+</div>
+ 
+
+
+
+</div>
+
+</div>
+
+<div class="part-3">
+<div class="table-div">
+<table>
+    <thead>
+            <tr>
+                 <th>
+                     Description
+                 </th>
+                   <th>
+                     Rate
+                 </th>
+                   <th>
+                     QTY
+                 </th>
+                   <th>
+                     Amount                 
+                   </th>
+            </tr>
+    </thead>
+
+    <tbody>
+            <tr>
+                <td>
+                          {{description}}
+                </td>
+                   <td>
+                           {{rate}}
+                </td>
+                   <td>
+                              {{QTY}}
+                </td>
+                   <td>
+                    N 455,000
+                   </td>
+            </tr>
+
+   <tr id="tbtd-p">
+           
+     <td colspan="4" id="tb-td">
+                    <p> SubTotal : N10,000</p>
+                    <p> Balance Due : N10,000 </p>
+                   </td>
+            </tr>
+
+
+    </tbody>
+</table>
+</div>
+
+</div>
+
+
+
+<div class="part-4">
+<p> Notes </p>
+
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur expedita accusamus repellat omnis ratione iste! Eos rem fugit laboriosam harum sunt voluptatem voluptates non deserunt?
+</p>
+
+</div>
+</div>
+
+</form>
+</body>
+</html>
