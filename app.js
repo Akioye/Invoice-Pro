@@ -87,8 +87,6 @@ app.set('view engine', 'hbs')
 //   res.render('update-invoice', {layout:'admin'})
 // })
 
-const PORT = 2100
 
-app.listen(PORT, ()=>{
-    console.log(`Now Listening on Port ${PORT}`)
-}); 
+app.listen(process.env.PORT|| 3000 )
+console.log('Server Started Successfully ! '); 

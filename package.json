@@ -1,7 +1,6 @@
 {
   "name": "invoicepro",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +18,7 @@
     "express-handlebars": "^6.0.6",
     "html-pdf": "^3.0.1",
     "mongoose": "^6.3.8"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
